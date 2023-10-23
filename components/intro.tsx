@@ -2,30 +2,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsLinkedin } from 'react-icons/bs';
-import { AiFillGithub } from 'react-icons/ai';
 import { BsArrowRight } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { LiaDownloadSolid } from 'react-icons/lia';
+import { FaGithubSquare } from 'react-icons/fa';
 
 export default function Intro() {
-  const arrow = {
-    initial: { x: 0 },
-    animate: { x: 3 },
-  };
-
-  const download = {
-    initial: { y: 0 },
-    animate: { y: 3 },
-  };
-
-  const bounce = {
-    initial: { scale: 1 },
-    animate: {
-      scale: 1.2,
-      transition: { duration: 0.1 },
-    },
-  };
-
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
       <div className="flex items-center justify-center">
@@ -68,13 +50,12 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Ricardo.</span> I&apos;m a{' '}
-        <span className="font-bold">full-stack developer</span> with{' '}
-        <span className="font-bold">8 years</span> of experience. I enjoy
+        <span className="font-bold">Hello, I&apos;m Ilyas El Mabrouki.</span> I&apos;m a{' '}
+        <span className="font-bold">full-stack developer</span>. I enjoy
         building sites & apps. My focus is{' '}
         <span className="underline">React (Next.js)</span>.
       </motion.p>
-      <motion.ul
+      <motion.div
         className="flex justify-center items-center flex-col sm:flex-row gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -82,67 +63,33 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <motion.li
-          initial="initial"
-          animate="initial"
-          whileHover="animate"
-          variants={bounce}
+        <Link
+          href="#contact"
+          className="flex group outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition items-center gap-2 py-3 px-7 rounded-full text-white bg-gray-900"
         >
-          <Link
-            href="#contact"
-            className="flex items-center gap-2 py-3 px-7 rounded-full text-white bg-gray-900"
-          >
-            Contact me here{' '}
-            <motion.span variants={arrow}>
-              {' '}
-              <BsArrowRight />
-            </motion.span>
-          </Link>
-        </motion.li>
-        <motion.li
-          initial="initial"
-          animate="initial"
-          whileHover="animate"
-          variants={bounce}
+          Contact me here{' '}
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+        </Link>
+        <a
+          href="/IlyasElMabrouki.pdf" download
+          className="flex group outline-none focus:scale-110 hover:scale-110 active:scale-105 transition items-center gap-2 py-3 px-7 rounded-full bg-white border border-black/10"
         >
-          <a
-            href="#"
-            className="flex items-center gap-2 py-3 px-7 rounded-full bg-white"
-          >
-            Download CV{' '}
-            <motion.span variants={download}>
-              {' '}
-              <LiaDownloadSolid />
-            </motion.span>
-          </a>
-        </motion.li>
-        <motion.li
-          initial="initial"
-          animate="initial"
-          whileHover="animate"
-          variants={bounce}
+          Download CV{' '}
+          <LiaDownloadSolid className="opacity-70 group-hover:translate-y-1 transition" />
+        </a>
+        <a
+          href="https://www.linkedin.com/feed/" target='_blank'
+          className="outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition rounded-full p-4 bg-white border border-black/10 text-gray-700 text-[1.35rem]"
         >
-          <a
-            href="https://www.linkedin.com/feed/"
-            className="flex items-center p-4 rounded-full bg-white text-gray-700"
-          >
-            <BsLinkedin />
-          </a>
-        </motion.li>
-        <motion.li
-          initial="initial"
-          animate="initial"
-          whileHover="animate"
-          variants={bounce}
+          <BsLinkedin />
+        </a>
+        <a
+          href="https://github.com/IlyasElMabrouki/" target='_blank'
+          className="outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition rounded-full p-4 bg-white border border-black/10 text-gray-700 text-[1.35rem]"
         >
-          <a
-            href="https://github.com/IlyasElMabrouki/"
-            className="flex items-center p-4 rounded-full bg-white text-gray-700"
-          >
-            <AiFillGithub />
-          </a>
-        </motion.li>
-      </motion.ul>
+          <FaGithubSquare />
+        </a>
+      </motion.div>
     </section>
   );
 }
