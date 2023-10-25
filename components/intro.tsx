@@ -52,8 +52,7 @@ export default function Intro() {
       >
         <span className="font-bold">Hello, I&apos;m Ilyas El Mabrouki.</span> I&apos;m a{' '}
         <span className="font-bold">full-stack developer</span>. I enjoy
-        building sites & apps. My focus is{' '}
-        <span className="underline">React (Next.js)</span>.
+        building sites & apps. 
       </motion.p>
       <motion.div
         className="flex justify-center items-center flex-col sm:flex-row gap-2 px-4 text-lg font-medium"
