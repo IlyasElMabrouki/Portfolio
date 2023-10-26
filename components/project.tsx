@@ -29,7 +29,8 @@ export default function Project({
         <Image
           className='absolute top-5 left-20'
           src={imageUrl}
-          alt="project image"
+          alt={title}
+          quality={95}
         ></Image>
       </div>
     </section>
