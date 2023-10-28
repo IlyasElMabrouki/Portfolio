@@ -10,14 +10,14 @@ export default function Project({
   imageUrl,
 }: ProjectProps) {
   return (
-    <section className="flex bg-gray-200/50 hover:bg-gray-200 w-full sm:max-w-2xl min-h-max my-4 rounded-lg transition">
-      <div className="w-full h-full p-5 sm:w-1/2">
-        <h3 className="text-2xl font-bold pb-3">{title}</h3>
-        <p className="pb-3 sm:pb-10">{description}</p>
-        <ul className="flex flex-wrap gap-3 ">
+    <section className="group bg-gray-100 max-w-2xl sm:h-[20rem] border border-black/5 overflow-hidden sm:pr-8 relative mb-3 sm:mb-8 last:mb-0 even:pl-8 hover:bg-gray-200 transition">
+      <div className="h-full flex flex-col pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] group-even:ml-[18rem]">
+        <h3 className="text-2xl font-semibold">{title}</h3>
+        <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
+        <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
           {tags.map((tag) => (
             <li
-              className="text-slate-200 text-[0.7rem] bg-gray-700 px-4 py-1 rounded-full uppercase"
+              className="text-white text-[0.7rem] bg-black/70 px-3 py-1 rounded-full uppercase tracking-wider"
               key={tag}
             >
               {tag}
@@ -25,14 +25,26 @@ export default function Project({
           ))}
         </ul>
       </div>
-      <div className="hidden sm:block h-full sm:w-1/2 sm:relative">
-        <Image
-          className='absolute top-5 left-20'
-          src={imageUrl}
-          alt={title}
-          quality={95}
-        ></Image>
-      </div>
+      <Image
+        className="absolute top-8 -right-40 w-[28.25rem] 
+        rounded-t-lg shadow-2xl 
+        group-even:right-[initial] 
+        group-even:-left-40 
+
+        group-hover:-translate-x-3 
+        group-hover:translate-y-3 
+        group-hover:-rotate-2 
+
+        group-even:group-hover:translate-x-3 
+        group-even:group-hover:translate-y-3 
+        group-even:group-hover:rotate-2 
+
+        group-hover:scale-[1.04]
+        transition"
+        src={imageUrl}
+        alt={title}
+        quality={95}
+      ></Image>
     </section>
   );
 }

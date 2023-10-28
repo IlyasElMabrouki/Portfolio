@@ -3,6 +3,7 @@ import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
 import trelloProject from '@/public/Trello_project.jpg';
+import ecomProject from '@/public/E-commerce_project.jpg';
 
 export const links = [
   {
@@ -71,7 +72,7 @@ export const projectsData = [
     description:
       'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
     tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-    imageUrl: trelloProject,
+    imageUrl: ecomProject,
   },
   {
     title: 'Word Analytics',
