@@ -9,7 +9,10 @@ import { FaGithubSquare } from 'react-icons/fa';
 
 export default function Intro() {
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section
+      id="home"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -50,9 +53,9 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Ilyas El Mabrouki.</span> I&apos;m a{' '}
-        <span className="font-bold">full-stack developer</span>. I enjoy
-        building sites & apps. 
+        <span className="font-bold">Hello, I&apos;m Ilyas El Mabrouki.</span>{' '}
+        I&apos;m a <span className="font-bold">full-stack developer</span>. I
+        enjoy building sites & apps.
       </motion.h1>
       <motion.div
         className="flex justify-center items-center flex-col sm:flex-row gap-2 px-4 text-lg font-medium"
@@ -70,20 +73,23 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          href="/IlyasElMabrouki.pdf" download
+          href="/IlyasElMabrouki.pdf"
+          download
           className="flex group outline-none focus:scale-110 hover:scale-110 active:scale-105 transition items-center gap-2 py-3 px-7 rounded-full bg-white border border-black/10"
         >
           Download CV{' '}
           <LiaDownloadSolid className="opacity-70 group-hover:translate-y-1 transition" />
         </a>
         <a
-          href="https://www.linkedin.com/feed/" target='_blank'
+          href="https://www.linkedin.com/feed/"
+          target="_blank"
           className="outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition rounded-full p-4 bg-white border border-black/10 text-gray-700 text-[1.35rem]"
         >
           <BsLinkedin />
         </a>
         <a
-          href="https://github.com/IlyasElMabrouki/" target='_blank'
+          href="https://github.com/IlyasElMabrouki/"
+          target="_blank"
           className="outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition rounded-full p-4 bg-white border border-black/10 text-gray-700 text-[1.35rem]"
         >
           <FaGithubSquare />

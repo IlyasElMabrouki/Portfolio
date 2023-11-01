@@ -4,7 +4,7 @@ import Heading from './heading';
 
 export default function Projects() {
   return (
-    <section>
+    <section id='projects' className='scroll-mt-28'>
       <Heading>My Projects</Heading>
       <div>
         {projectsData.map((project) => (

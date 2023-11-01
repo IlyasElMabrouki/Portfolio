@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
+import clsx from 'clsx';
 
 export default function Header() {
-  const [link, setLink] = useState<string>('Home');
-
+  const [activeSection, setActiveSection] = useState<String>('Home');
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -18,16 +18,23 @@ export default function Header() {
         <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
-              className="h-3/4 flex items-center justify-center"
+              className="h-3/4 flex items-center justify-center relative"
               key={link.hash}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-500 transition"
+                className={clsx(
+                  'flex w-full items-center justify-center px-3 py-3 transition text-gray-600 hover:text-gray-950',
+                  { '!text-gray-950': activeSection === link.name }
+                )}
                 href={link.hash}
+                onClick={() => setActiveSection(link.name)}
               >
                 {link.name}
+                {activeSection === link.name && (
+                  <span className="bg-gray-100 rounded-full absolute inset-0 -z-10"></span>
+                )}
               </Link>
             </motion.li>
           ))}
@@ -35,15 +42,4 @@ export default function Header() {
       </nav>
     </header>
   );
-}
-
-{
-  /*<div className="mx-auto flex justify-center gap-x-2 mt-4 sm:rounded-full bg-slate-300 px-4 py-1 w-full sm:w-max">
-        <Link className={`${link == "Home" ? 'bg-slate-200' : ''} rounded-full p-2 `} href="" onClick={()=>setLink("Home")}>Home</Link>
-        <Link className={`${link == "About" ? 'bg-slate-200' : ''} rounded-full p-2 `}  href="" onClick={()=>setLink("About")}>About</Link>
-        <Link className={`${link == "Projects" ? 'bg-slate-200' : ''} rounded-full p-2 `}  href="" onClick={()=>setLink("Projects")}>Projects</Link>
-        <Link className={`${link == "Skills" ? 'bg-slate-200' : ''} rounded-full p-2 `}  href="" onClick={()=>setLink("Skills")}>Skills</Link>
-        <Link className={`${link == "Experience" ? 'bg-slate-200' : ''} rounded-full p-2 `}  href="" onClick={()=>setLink("Experience")}>Experience</Link>
-        <Link className={`${link == "Contact" ? 'bg-slate-200' : ''} rounded-full p-2 `}  href="" onClick={()=>setLink("Contact")}>Contact</Link>
-  </div>*/
 }
