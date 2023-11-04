@@ -1,15 +1,28 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import Heading from './heading';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function About() {
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) setActiveSection('About');
+  }, [inView, setActiveSection, timeOfLastClick]);
+
   return (
     <motion.section
+      ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       className="mb-28 text-center max-w-[45rem] leading-8 sm:mb-40 scroll-mt-28"
-      id='about'
+      id="about"
     >
       <Heading>About Me</Heading>
       <p className="mb-3">
