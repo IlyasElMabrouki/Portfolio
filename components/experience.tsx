@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import {
   VerticalTimeline,
@@ -16,7 +15,7 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <Heading>My experience</Heading>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="#e5e7eb">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
@@ -28,7 +27,7 @@ export default function Experience() {
                 padding: '1.3rem 2rem',
               }}
               contentArrowStyle={{
-                borderRight: '0.4rem solid rgba(0, 0, 0, 0.5)',
+                borderRight: '0.4rem solid #9ca3af',
               }}
               date={item.date}
               icon={item.icon}
