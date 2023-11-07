@@ -84,7 +84,7 @@ export default function Intro() {
           <LiaDownloadSolid className="opacity-70 group-hover:translate-y-1 transition" />
         </a>
         <a
-          href="https://www.linkedin.com/feed/"
+          href="https://www.linkedin.com/in/ilyaselmabrouki/"
           target="_blank"
           className="outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition rounded-full p-4 bg-white border border-black/10 text-gray-700 text-[1.35rem]"
         >
