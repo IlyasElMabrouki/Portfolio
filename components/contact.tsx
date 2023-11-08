@@ -4,9 +4,11 @@ import React from 'react';
 import Heading from './heading';
 import { FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { sendEmail } from '@/actions/sendEmail';
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact');
+
   return (
     <motion.section
       id="contact"
@@ -33,15 +35,21 @@ export default function Contact() {
         </a>{' '}
         or through this form.
       </p>
-      <form className="flex flex-col gap-4 mt-10">
+      <form className="flex flex-col gap-4 mt-10" action={sendEmail}>
         <input
           type="email"
+          name="senderEmail"
           className="border border-black/10 rounded-lg bg-white h-14 p-5"
           placeholder="Your email"
+          required
+          maxLength={500}
         ></input>
         <textarea
+          name="message"
           className="border border-black/10 rounded-lg h-52 p-5"
           placeholder="Your message"
+          required
+          maxLength={500}
         ></textarea>
         <button
           type="submit"

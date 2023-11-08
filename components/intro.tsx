@@ -7,9 +7,12 @@ import { motion } from 'framer-motion';
 import { LiaDownloadSolid } from 'react-icons/lia';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Intro() {
   const { ref } = useSectionInView('Home');
+  const { setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   return (
     <section
       ref={ref}
@@ -71,6 +74,10 @@ export default function Intro() {
         <Link
           href="#contact"
           className="flex group outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition items-center gap-2 py-3 px-7 rounded-full text-white bg-gray-900"
+          onClick={() => {
+            setActiveSection('Contact');
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here{' '}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
