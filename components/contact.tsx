@@ -2,9 +2,10 @@
 import { useSectionInView } from '@/lib/hooks';
 import React from 'react';
 import Heading from './heading';
-import { FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { sendEmail } from '@/actions/sendEmail';
+import SubmitBtn from '@/components/submit-btn';
+import toast from 'react-hot-toast';
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact');
@@ -38,7 +39,12 @@ export default function Contact() {
       <form
         className="flex flex-col gap-4 mt-10"
         action={async (formData) => {
-          await sendEmail(formData);
+          const { data, error } = await sendEmail(formData);
+          if (error) {
+            toast.error(error);
+            return;
+          }
+          toast.success('Email sent Successfully!');
         }}
       >
         <input
@@ -56,13 +62,7 @@ export default function Contact() {
           required
           maxLength={5000}
         ></textarea>
-        <button
-          type="submit"
-          className="flex items-center justify-center gap-2 group focus:scale-110 active:scale-105 hover:scale-110 transition-all h-[3rem] w-[8rem] text-white bg-gray-900 hover:bg-gray-950 px-5 py-3 rounded-full outline-none"
-        >
-          Submit{' '}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
-        </button>
+        <SubmitBtn />
       </form>
     </motion.section>
   );
