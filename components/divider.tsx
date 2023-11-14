@@ -7,7 +7,7 @@ export default function Divider() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.125 }}
-      className="h-16 hidden w-1 bg-gray-200 my-24 sm:block rounded-full"
+      className="h-16 hidden w-1 bg-gray-200 dark:bg-opacity-20 my-24 sm:block rounded-full"
     ></motion.div>
   );
 }

@@ -85,7 +85,7 @@ export default function Intro() {
         <a
           href="/IlyasElMabrouki.pdf"
           download
-          className="flex group outline-none focus:scale-110 hover:scale-110 active:scale-105 transition items-center gap-2 py-3 px-7 rounded-full bg-white border border-black/10"
+          className="flex group outline-none focus:scale-110 hover:scale-110 active:scale-105 transition items-center gap-2 py-3 px-7 rounded-full bg-white border border-black/10 dark:text-white/60 dark:bg-white/10"
         >
           Download CV{' '}
           <LiaDownloadSolid className="opacity-70 group-hover:translate-y-1 transition" />
@@ -93,14 +93,14 @@ export default function Intro() {
         <a
           href="https://www.linkedin.com/in/ilyaselmabrouki/"
           target="_blank"
-          className="outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition rounded-full p-4 bg-white border border-black/10 text-gray-700 text-[1.35rem]"
+          className="outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition rounded-full p-4 bg-white border border-black/10 text-gray-700 text-[1.35rem] dark:text-white/60 dark:bg-white/10"
         >
           <BsLinkedin />
         </a>
         <a
           href="https://github.com/IlyasElMabrouki/"
           target="_blank"
-          className="outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition rounded-full p-4 bg-white border border-black/10 text-gray-700 text-[1.35rem]"
+          className="outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition rounded-full p-4 bg-white border border-black/10 text-gray-700 text-[1.35rem] dark:text-white/60 dark:bg-white/10"
         >
           <FaGithubSquare />
         </a>
