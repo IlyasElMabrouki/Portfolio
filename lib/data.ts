@@ -1,7 +1,6 @@
 import React from 'react';
-import { CgWorkAlt } from 'react-icons/cg';
-import { FaReact } from 'react-icons/fa';
-import { LuGraduationCap } from 'react-icons/lu';
+import { FaReact, FaPhp, FaJava } from 'react-icons/fa';
+import { DiPhotoshop } from "react-icons/di";
 import trelloProject from '@/public/Trello_project.jpg';
 import ecomProject from '@/public/E-commerce_project.jpg';
 
@@ -34,76 +33,70 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Graduated bootcamp',
-    location: 'Miami, FL',
+    title: 'Designer',
+    location: 'Autovallez Maroc',
     description:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
-    icon: React.createElement(LuGraduationCap),
-    date: '2019',
+      'I successfully designed two flyers aimed at encouraging taxi drivers to leverage the advanced features available in the company\'s car services.',
+    icon: React.createElement(DiPhotoshop),
+    date: 'Aug 2021 · 1 mo',
   },
   {
-    title: 'Front-End Developer',
-    location: 'Orlando, FL',
-    description:
-      'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
-    icon: React.createElement(CgWorkAlt),
-    date: '2019 - 2021',
+    title: 'Java Application Developer',
+    location: 'Kromberg & Schubert',
+    description: 'I developed a Java application dedicated to efficiently managing the company\'s stock.',
+    icon: React.createElement(FaJava),
+    date: 'Aug 2021 · 1 mo',
   },
   {
     title: 'Full-Stack Developer',
-    location: 'Houston, TX',
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+    location: 'S-Car Chrono Service',
+    description: 'I took charge of developing a web application using PHP to efficiently manage the time-related aspects of company employees, including attendance tracking, absence management, and holiday requests.',
+    icon: React.createElement(FaPhp),
+    date: 'May 2022 · 1 mo',
+  },
+  {
+    title: 'Full-Stack Developer',
+    location: 'Godogi',
+    description: 'I actively contributed to the realization of a fully functional e-commerce website.',
     icon: React.createElement(FaReact),
-    date: '2021 - present',
+    date: 'July 2023 - Aug 2023 · 2 mos',
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: 'CorpComment',
+    title: 'AI-Trello Clone',
     description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
+      'Effectively manage your tasks with drag-and-drop functionality, and simplifies the process of summarizing your daily tasks.',
+    tags: ['React', 'Tailwind', 'Next.js', 'GPT-3', 'AppWrite'],
     imageUrl: trelloProject,
-    deploymentUrl : 'https://ai-trello-clone-ilyaselmabrouki.vercel.app/'
+    deploymentUrl: 'https://ai-trello-clone-ilyaselmabrouki.vercel.app/',
   },
   {
-    title: 'rmtDev',
-    description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
+    title: 'E-Commerce Website',
+    description: 'Facilitate online product sales by offering users a catalog showcasing a range of available items for purchase.',
+    tags: ['React', 'Next.js', 'Tailwind', 'MongoDB', 'PayPal', 'Stripe'],
     imageUrl: ecomProject,
-    deploymentUrl : 'https://e-commerce-ilyaselmabrouki.vercel.app/'
-  },
-  {
-    title: 'Word Analytics',
-    description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
-    imageUrl: trelloProject,
-    deploymentUrl : 'https://ai-trello-clone-ilyaselmabrouki.vercel.app/'
+    deploymentUrl: 'https://e-commerce-ilyaselmabrouki.vercel.app/',
   },
 ] as const;
 
 export const skillsData = [
+  'C',
+  'C++',
+  'Java',
   'HTML',
   'CSS',
+  'Tailwind',
   'JavaScript',
   'TypeScript',
   'React',
   'Next.js',
   'Node.js',
-  'Git',
-  'Tailwind',
-  'Prisma',
+  'Express.js',
+  'PHP',
+  'MySQL',
   'MongoDB',
-  'Redux',
-  'GraphQL',
-  'Apollo',
-  'Express',
-  'PostgreSQL',
-  'Python',
-  'Django',
-  'Framer Motion',
+  'Prisma',
+  'Git',
 ] as const;

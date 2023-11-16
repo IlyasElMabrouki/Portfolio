@@ -16,20 +16,20 @@ export default function About() {
     >
       <Heading>About Me</Heading>
       <p className="mb-3">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, tempora
-        necessitatibus illum, possimus odio ipsum labore neque enim aut, maxime
-        voluptates id voluptas natus! Vel quod, eveniet eaque, aliquam enim
-        dolor nihil soluta incidunt debitis facere cum asperiores accusantium
-        deleniti aut non qui doloribus quae quisquam veritatis temporibus.
+        Hi I&apos;m Ilyas El Mabrouki, I&apos;m Full-Stack Developer and student
+        specializing in Software Engineering and Distributed Information Systems
+        at ENSET Mohammedia. My core stack is React, Next.js, Node.js, and
+        MongoDB. I am also familiar with TypeScript.
       </p>
-      <p>
-        tempora velit! Atque vitae quae quia voluptatibus non iusto quos illo,
-        minus expedita fugiat distinctio praesentium, accusamus maxime
-        aspernatur molestias ipsum odio. Odio assumenda dignissimos ab hic
-        dolores, ex repellendus? Commodi iste sequi nam? Sint, ipsum cum.
-        Deserunt consequuntur nisi ducimus? Accusamus quidem asperiores illum
-        corrupti culpa sunt provident deleniti sequi ipsam.
+      <p className="mb-5">
+        Continuous improvement is a significant advantage that I leverage not
+        only in my professional endeavors but also in my personal life. I am
+        dedicated to consistently striving to become a better version of myself.
       </p>
+      <p className="italic">
+          &ldquo;One step at a time is all it takes to get you there&ldquo;
+      </p>
+      <p className="font-bold">Emily Dickinson</p>
     </motion.section>
   );
 }
