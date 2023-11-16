@@ -41,7 +41,7 @@ export default function Contact() {
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
           if (error) {
-            toast.error(error);
+            toast.error(""+ error);
             return;
           }
           toast.success('Email sent Successfully!');

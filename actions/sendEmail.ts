@@ -34,7 +34,7 @@ export const sendEmail = async (formData: FormData) => {
         emailSender : senderEmail as string,
       })
     });
-  } catch (error) {
+  } catch (error : unknown) {
     return {
       error : getMessageError(error),
     }
