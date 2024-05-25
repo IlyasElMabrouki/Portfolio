@@ -87,12 +87,14 @@ export const projectsData = [
 export const essaysData = [
   {
     title: 'GEIW 2024: Exploring Innovation and Entrepreneurship',
+    description: '',
     tags: ['GEIW 2024', 'Innovation', 'Entrepreneurship', 'AI', 'Cybersecurity'],
     imageUrl: geiwEssay,
     deploymentUrl: '/GEIW_Essay.pdf',
   },
   {
     title: 'Mastering Effective Communication in the Job Market',
+    description: '',
     tags: ['Effective Communication', 'Job Market', 'English Class', 'Interview Skills'],
     imageUrl: communicationEssay,
     deploymentUrl: '/ProCommunication_Essay.pdf',
