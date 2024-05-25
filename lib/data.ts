@@ -3,6 +3,8 @@ import { FaReact, FaPhp, FaJava } from 'react-icons/fa';
 import { DiPhotoshop } from "react-icons/di";
 import trelloProject from '@/public/Trello_project.jpg';
 import ecomProject from '@/public/E-commerce_project.jpg';
+import geiwEssay from '@/public/geiw.jpg';
+import communicationEssay from '@/public/procomm.jpeg';
 
 export const links = [
   {
@@ -78,6 +80,22 @@ export const projectsData = [
     tags: ['React', 'Next.js', 'Tailwind', 'MongoDB', 'PayPal', 'Stripe'],
     imageUrl: ecomProject,
     deploymentUrl: 'https://e-commerce-ilyaselmabrouki.vercel.app/',
+  },
+] as const;
+
+
+export const essaysData = [
+  {
+    title: 'GEIW 2024: Exploring Innovation and Entrepreneurship',
+    tags: ['GEIW 2024', 'Innovation', 'Entrepreneurship', 'AI', 'Cybersecurity'],
+    imageUrl: geiwEssay,
+    deploymentUrl: '/GEIW_Essay.pdf',
+  },
+  {
+    title: 'Mastering Effective Communication in the Job Market',
+    tags: ['Effective Communication', 'Job Market', 'English Class', 'Interview Skills'],
+    imageUrl: communicationEssay,
+    deploymentUrl: '/ProCommunication_Essay.pdf',
   },
 ] as const;
 
