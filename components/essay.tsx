@@ -1,10 +1,10 @@
 'use client';
-import { projectsData } from '@/lib/data';
+import { essaysData } from '@/lib/data';
 import Image from 'next/image';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof essaysData)[number];
 
 export default function Essay({
   title,
